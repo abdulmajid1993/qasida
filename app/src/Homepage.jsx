@@ -28,18 +28,18 @@ const sections = [
     arabic: "قصيدة",
     description: "Classical Arabic & Persian poetry in praise of the Prophet ﷺ",
     count: 29,
-    accent: "#4a9e99",
-    accentDim: "rgba(74,158,153,0.12)",
-    accentBorder: "rgba(74,158,153,0.35)",
+    accent: "#c9a84c",
+    accentDim: "rgba(201,168,76,0.12)",
+    accentBorder: "rgba(201,168,76,0.35)",
     icon: (
       <svg viewBox="0 0 60 60" width="52" height="52" fill="none">
-        <path d="M15 48 L15 20 Q15 14 21 14 L45 14" stroke="rgba(74,158,153,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M15 44 L42 44" stroke="rgba(74,158,153,0.35)" strokeWidth="1" strokeDasharray="3 3"/>
-        <path d="M15 37 L42 37" stroke="rgba(74,158,153,0.35)" strokeWidth="1" strokeDasharray="3 3"/>
-        <path d="M15 30 L38 30" stroke="rgba(74,158,153,0.35)" strokeWidth="1" strokeDasharray="3 3"/>
-        <path d="M15 23 L34 23" stroke="rgba(74,158,153,0.35)" strokeWidth="1" strokeDasharray="3 3"/>
-        <circle cx="44" cy="14" r="5" fill="rgba(74,158,153,0.2)" stroke="rgba(74,158,153,0.6)" strokeWidth="1.2"/>
-        <path d="M44 10 L44 18 M40 14 L48 14" stroke="rgba(74,158,153,0.6)" strokeWidth="1.2" strokeLinecap="round"/>
+        <path d="M15 48 L15 20 Q15 14 21 14 L45 14" stroke="rgba(201,168,76,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M15 44 L42 44" stroke="rgba(201,168,76,0.35)" strokeWidth="1" strokeDasharray="3 3"/>
+        <path d="M15 37 L42 37" stroke="rgba(201,168,76,0.35)" strokeWidth="1" strokeDasharray="3 3"/>
+        <path d="M15 30 L38 30" stroke="rgba(201,168,76,0.35)" strokeWidth="1" strokeDasharray="3 3"/>
+        <path d="M15 23 L34 23" stroke="rgba(201,168,76,0.35)" strokeWidth="1" strokeDasharray="3 3"/>
+        <circle cx="44" cy="14" r="5" fill="rgba(201,168,76,0.2)" stroke="rgba(201,168,76,0.6)" strokeWidth="1.2"/>
+        <path d="M44 10 L44 18 M40 14 L48 14" stroke="rgba(201,168,76,0.6)" strokeWidth="1.2" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -49,19 +49,19 @@ const sections = [
     arabic: "إلهي",
     description: "Turkish & Ottoman devotional hymns",
     count: 2,
-    accent: "#a07888",
-    accentDim: "rgba(160,120,136,0.12)",
-    accentBorder: "rgba(160,120,136,0.35)",
+    accent: "#c9a84c",
+    accentDim: "rgba(201,168,76,0.12)",
+    accentBorder: "rgba(201,168,76,0.35)",
     icon: (
       <svg viewBox="0 0 60 60" width="52" height="52" fill="none">
         <path d="M20 42 C20 42 18 30 24 24 C28 20 34 20 38 24 C42 28 40 36 36 40"
-          stroke="rgba(160,120,136,0.5)" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+          stroke="rgba(201,168,76,0.5)" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
         <path d="M36 40 C36 40 32 44 28 43 C24 42 22 38 24 34"
-          stroke="rgba(160,120,136,0.4)" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
-        <circle cx="30" cy="22" r="3" fill="rgba(160,120,136,0.4)" stroke="rgba(160,120,136,0.6)" strokeWidth="1"/>
-        <path d="M26 46 Q30 50 34 46" stroke="rgba(160,120,136,0.5)" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
-        <path d="M14 30 Q18 26 20 30" stroke="rgba(160,120,136,0.3)" strokeWidth="1" strokeLinecap="round" fill="none"/>
-        <path d="M40 30 Q44 26 46 30" stroke="rgba(160,120,136,0.3)" strokeWidth="1" strokeLinecap="round" fill="none"/>
+          stroke="rgba(201,168,76,0.4)" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+        <circle cx="30" cy="22" r="3" fill="rgba(201,168,76,0.4)" stroke="rgba(201,168,76,0.6)" strokeWidth="1"/>
+        <path d="M26 46 Q30 50 34 46" stroke="rgba(201,168,76,0.5)" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+        <path d="M14 30 Q18 26 20 30" stroke="rgba(201,168,76,0.3)" strokeWidth="1" strokeLinecap="round" fill="none"/>
+        <path d="M40 30 Q44 26 46 30" stroke="rgba(201,168,76,0.3)" strokeWidth="1" strokeLinecap="round" fill="none"/>
       </svg>
     ),
   },
@@ -77,7 +77,7 @@ function GeometricPattern() {
       <defs>
         <pattern id="geo" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
           <polygon points="40,4 76,22 76,58 40,76 4,58 4,22" fill="none" stroke="#c9a84c" strokeWidth="0.5"/>
-          <polygon points="40,16 64,28 64,52 40,64 16,52 16,28" fill="none" stroke="#4a9e99" strokeWidth="0.3"/>
+          <polygon points="40,16 64,28 64,52 40,64 16,52 16,28" fill="none" stroke="#2c6e6a" strokeWidth="0.3"/>
           <circle cx="40" cy="40" r="4" fill="none" stroke="#c9a84c" strokeWidth="0.4"/>
         </pattern>
       </defs>
