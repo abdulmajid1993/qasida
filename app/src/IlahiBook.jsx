@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const ROSE   = "#a07888";
+const ROSE   = "#2c6e6a";
 const GOLD   = "#c9a84c";
 
 const ilahis = [
@@ -57,8 +57,8 @@ function BgLayer() {
     <div style={{
       position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0,
       backgroundImage:
-        "radial-gradient(ellipse at 10% 15%, rgba(160,120,136,0.12) 0%, transparent 55%)," +
-        "radial-gradient(ellipse at 90% 85%, rgba(201,168,76,0.07) 0%, transparent 55%)",
+        "radial-gradient(ellipse at 10% 15%, rgba(44,110,106,0.12) 0%, transparent 55%)," +
+        "radial-gradient(ellipse at 90% 85%, rgba(184,150,62,0.07) 0%, transparent 55%)",
     }} />
   );
 }
@@ -78,7 +78,7 @@ function VerseBlock({ verse, label }) {
   return (
     <div style={{ marginBottom: 28 }}>
       <div style={{ fontSize: 10, letterSpacing: "2px", textTransform: "uppercase",
-        color: `${ROSE}73`, marginBottom: 10 }}>
+        color: "rgba(184,150,62,0.4)", marginBottom: 10 }}>
         {label}
       </div>
 
@@ -122,9 +122,9 @@ function NavBtn({ dir, q, onClick }) {
       onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
       style={{
         background: "rgba(255,255,255,0.03)",
-        border: `1px solid ${hov ? `${ROSE}88` : `${ROSE}33`}`,
+        border: `1px solid ${hov ? "rgba(44,110,106,0.55)" : "rgba(184,150,62,0.2)"}`,
         borderRadius: 9, padding: "12px 16px",
-        color: hov ? ROSE : `${ROSE}a6`,
+        color: hov ? "#c9a84c" : "rgba(184,150,62,0.65)",
         fontSize: 12, fontFamily: "inherit", cursor: "pointer",
         maxWidth: "46%", textAlign: dir === "prev" ? "left" : "right",
         transition: "all 0.18s",
@@ -144,7 +144,7 @@ function BackBtn({ label, onClick }) {
       onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
       style={{
         background: "none", border: "none",
-        color: hov ? ROSE : `${ROSE}99`,
+        color: hov ? "#c9a84c" : "rgba(184,150,62,0.6)",
         fontSize: 12, letterSpacing: "1.8px", textTransform: "uppercase",
         cursor: "pointer", fontFamily: "inherit",
         padding: 0, display: "flex", alignItems: "center", gap: 8,
@@ -171,7 +171,7 @@ function ItemCard({ ilahi, onClick }) {
       }}>
       <div style={{
         position: "absolute", top: 0, left: 0, right: 0, height: "1.5px",
-        background: `linear-gradient(90deg, transparent, ${ROSE}99, transparent)`,
+        background: "linear-gradient(90deg, transparent, rgba(184,150,62,0.6), transparent)",
         opacity: hov ? 1 : 0, transition: "opacity 0.2s",
       }}/>
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
@@ -182,13 +182,13 @@ function ItemCard({ ilahi, onClick }) {
             fontFamily: "Georgia,'Times New Roman',serif", lineHeight: 1.35 }}>
             {ilahi.title}
           </h3>
-          <p style={{ fontSize: 11, color: `${ROSE}99`, margin: 0, letterSpacing: 0.3 }}>
+          <p style={{ fontSize: 11, color: "rgba(184,150,62,0.55)", margin: 0, letterSpacing: 0.3 }}>
             {ilahi.poet}
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0, paddingTop: 4 }}>
           <span style={{ width: 8, height: 8, borderRadius: "50%", background: `${ROSE}cc`, flexShrink: 0 }}/>
-          <span style={{ color: hov ? ROSE : `${ROSE}80`, fontSize: 18, transition: "color 0.2s" }}>→</span>
+          <span style={{ color: hov ? "#c9a84c" : `${ROSE}80`, fontSize: 18, transition: "color 0.2s" }}>→</span>
         </div>
       </div>
     </div>
@@ -238,7 +238,7 @@ export default function IlahiBook({ onBack }) {
           <div style={{ display: "flex", gap: 20, padding: "10px 0 14px",
             borderBottom: `1px solid ${ROSE}1a`, fontSize: 11, letterSpacing: "1.2px", textTransform: "uppercase" }}>
             <span style={{ color: "#cce4e2", display: "flex", alignItems: "center", gap: 7 }}>
-              <span style={{ width: 18, height: 2, background: `${ROSE}55`, display: "inline-block", borderRadius: 2 }} />
+              <span style={{ width: 18, height: 2, background: "rgba(180,220,218,0.3)", display: "inline-block", borderRadius: 2 }} />
               Turkish
             </span>
             <span style={{ color: `${GOLD}d9`, display: "flex", alignItems: "center", gap: 7 }}>
@@ -272,7 +272,7 @@ export default function IlahiBook({ onBack }) {
         <div style={{ position: "absolute", left: 20, top: 48 }}>
           <BackBtn label="Home" onClick={onBack} />
         </div>
-        <div style={{ fontSize: 18, letterSpacing: 4, color: `${ROSE}b3`, marginBottom: 10, fontFamily: "serif" }}>
+        <div style={{ fontSize: 18, letterSpacing: 4, color: "rgba(184,150,62,0.7)", marginBottom: 10, fontFamily: "serif" }}>
           إلهي
         </div>
         <h1 style={{ fontSize: "clamp(30px,7vw,52px)", fontWeight: 400,
@@ -282,14 +282,14 @@ export default function IlahiBook({ onBack }) {
           Ilahi Lyrics
         </h1>
         <div style={{ width: 140, height: 1,
-          background: `linear-gradient(90deg,transparent,${ROSE}99,transparent)`,
+          background: "linear-gradient(90deg,transparent,rgba(184,150,62,0.6),transparent)",
           margin: "14px auto 12px" }}/>
         <p style={{ fontSize: 12, color: `${ROSE}8c`, letterSpacing: 3, margin: 0, textTransform: "uppercase" }}>
           {ilahis.length} Ilahis
         </p>
       </header>
       <main style={{ position: "relative", zIndex: 5, maxWidth: 940, margin: "0 auto", padding: "30px 20px 80px" }}>
-        <p style={{ fontSize: 13, color: `${ROSE}80`, fontStyle: "italic", marginBottom: 28, lineHeight: 1.8 }}>
+        <p style={{ fontSize: 13, color: "rgba(44,110,106,0.7)", fontStyle: "italic", marginBottom: 28, lineHeight: 1.8 }}>
           Turkish & Ottoman devotional hymns from the Sufi tradition, principally the poetry of Yunus Emre.
         </p>
         <div style={{ display: "grid",
@@ -302,7 +302,7 @@ export default function IlahiBook({ onBack }) {
       <footer style={{
         position: "relative", zIndex: 5, textAlign: "center", padding: "22px",
         borderTop: `1px solid ${ROSE}1a`,
-        color: `${ROSE}80`, fontSize: 20,
+        color: "rgba(184,150,62,0.5)", fontSize: 20,
         fontFamily: "Georgia,'Times New Roman',serif", letterSpacing: 2,
       }}>
         اللهم صل على سيدنا محمد

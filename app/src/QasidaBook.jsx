@@ -731,26 +731,26 @@ function BgLayer() {
       position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0,
       backgroundImage:
         "radial-gradient(ellipse at 10% 15%, rgba(44,110,106,0.12) 0%, transparent 55%)," +
-        "radial-gradient(ellipse at 90% 85%, rgba(74,158,153,0.07) 0%, transparent 55%)",
+        "radial-gradient(ellipse at 90% 85%, rgba(184,150,62,0.07) 0%, transparent 55%)",
     }} />
   );
 }
 
 function Badge({ language }) {
   const colorMap = {
-    "Arabic": "rgba(74,158,153,0.7)",
-    "Turkish": "rgba(160,120,136,0.7)",
+    "Arabic": "rgba(44,110,106,0.7)",
+    "Turkish": "rgba(44,110,106,0.7)",
     "Urdu": "rgba(201,168,76,0.7)",
-    "Arabic / Turkish / Urdu": "rgba(74,158,153,0.7)",
-    "Arabic / English": "rgba(74,158,153,0.7)",
+    "Arabic / Turkish / Urdu": "rgba(44,110,106,0.7)",
+    "Arabic / English": "rgba(44,110,106,0.7)",
   };
   return (
     <span style={{
       fontSize: 10, letterSpacing: "1.5px", textTransform: "uppercase",
-      color: colorMap[language] || "rgba(74,158,153,0.7)",
-      border: `1px solid ${colorMap[language] || "rgba(74,158,153,0.3)"}`,
+      color: colorMap[language] || "rgba(44,110,106,0.7)",
+      border: `1px solid ${colorMap[language] || "rgba(44,110,106,0.4)"}`,
       borderRadius: 20, padding: "3px 10px",
-      background: "rgba(74,158,153,0.06)",
+      background: "rgba(44,110,106,0.06)",
     }}>
       {language}
     </span>
@@ -768,9 +768,9 @@ function Card({ q, index, onClick }) {
       onMouseLeave={() => setHov(false)}
       style={{
         background: hov
-          ? "linear-gradient(135deg, rgba(74,158,153,0.1) 0%, rgba(255,255,255,0.03) 100%)"
+          ? "linear-gradient(135deg, rgba(44,110,106,0.1) 0%, rgba(255,255,255,0.03) 100%)"
           : "rgba(255,255,255,0.025)",
-        border: `1px solid ${hov ? "rgba(74,158,153,0.45)" : "rgba(74,158,153,0.15)"}`,
+        border: `1px solid ${hov ? "rgba(44,110,106,0.55)" : "rgba(44,110,106,0.2)"}`,
         borderRadius: 12, padding: "18px 20px",
         cursor: "pointer", transition: "all 0.2s ease",
         position: "relative", overflow: "hidden",
@@ -778,7 +778,7 @@ function Card({ q, index, onClick }) {
     >
       <div style={{
         position: "absolute", top: 0, left: 0, right: 0, height: "1.5px",
-        background: "linear-gradient(90deg, transparent, rgba(74,158,153,0.6), transparent)",
+        background: "linear-gradient(90deg, transparent, rgba(184,150,62,0.6), transparent)",
         opacity: hov ? 1 : 0, transition: "opacity 0.2s",
       }} />
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
@@ -794,17 +794,17 @@ function Card({ q, index, onClick }) {
           }}>
             {q.title}
           </h3>
-          <p style={{ fontSize: 12, color: "rgba(74,158,153,0.6)", margin: 0, letterSpacing: 0.3 }}>
+          <p style={{ fontSize: 12, color: "rgba(184,150,62,0.55)", margin: 0, letterSpacing: 0.3 }}>
             {q.poet}
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0, paddingTop: 4 }}>
           <span style={{
             width: 8, height: 8, borderRadius: "50%", flexShrink: 0,
-            background: hasContent ? "rgba(74,158,153,0.75)" : "rgba(200,200,200,0.2)",
+            background: hasContent ? "rgba(44,150,140,0.7)" : "rgba(200,200,200,0.2)",
           }} />
           <span style={{
-            color: hov ? "#c9a84c" : "rgba(74,158,153,0.5)",
+            color: hov ? "#c9a84c" : "rgba(44,110,106,0.5)",
             fontSize: 18, transition: "color 0.2s",
           }}>→</span>
         </div>
@@ -818,16 +818,16 @@ function VerseBlock({ verse, index, label }) {
     <div style={{ marginBottom: 28 }}>
       <div style={{
         fontSize: 10, letterSpacing: "2px", textTransform: "uppercase",
-        color: "rgba(74,158,153,0.45)", marginBottom: 10,
+        color: "rgba(184,150,62,0.4)", marginBottom: 10,
       }}>
         {label}
       </div>
 
       {/* Arabic — larger, right-aligned */}
       <div style={{
-        borderLeft: "2px solid rgba(74,158,153,0.3)",
+        borderLeft: "2px solid rgba(44,110,106,0.4)",
         padding: "16px 20px", marginBottom: 8,
-        background: "rgba(74,158,153,0.04)", borderRadius: "0 8px 8px 0",
+        background: "rgba(44,110,106,0.04)", borderRadius: "0 8px 8px 0",
       }}>
         {verse.original.split("\n").map((line, i) => (
           <p key={i} style={{
@@ -843,14 +843,14 @@ function VerseBlock({ verse, index, label }) {
       {/* Transliteration */}
       {verse.transliteration && (
         <div style={{
-          borderLeft: "2px solid rgba(74,158,153,0.5)",
-          background: "rgba(74,158,153,0.05)",
+          borderLeft: "2px solid rgba(44,110,106,0.5)",
+          background: "rgba(44,110,106,0.05)",
           borderRadius: "0 8px 8px 0", padding: "12px 18px", marginBottom: 8,
         }}>
           {verse.transliteration.split("\n").map((line, i) => (
             <p key={i} style={{
               margin: i === 0 ? 0 : "5px 0 0", fontSize: 14, lineHeight: 1.9,
-              color: "rgba(74,158,153,0.9)", fontStyle: "italic", letterSpacing: 0.3,
+              color: "rgba(180,220,218,0.85)", fontStyle: "italic", letterSpacing: 0.3,
             }}>
               {line}
             </p>
@@ -886,7 +886,7 @@ function NavBtn({ dir, q, onClick }) {
       onMouseLeave={() => setHov(false)}
       style={{
         background: "rgba(255,255,255,0.03)",
-        border: `1px solid ${hov ? "rgba(74,158,153,0.55)" : "rgba(201,168,76,0.2)"}`,
+        border: `1px solid ${hov ? "rgba(44,110,106,0.55)" : "rgba(201,168,76,0.2)"}`,
         borderRadius: 9, padding: "12px 16px",
         color: hov ? "#c9a84c" : "rgba(201,168,76,0.65)",
         fontSize: 12, fontFamily: "inherit",
@@ -905,7 +905,7 @@ function NavBtn({ dir, q, onClick }) {
 
 const backBtnStyle = {
   background: "none", border: "none",
-  color: "rgba(74,158,153,0.6)", fontSize: 12,
+  color: "rgba(184,150,62,0.6)", fontSize: 12,
   letterSpacing: "1.8px", textTransform: "uppercase",
   cursor: "pointer", fontFamily: "inherit",
   padding: "22px 0 0", display: "flex",
@@ -951,36 +951,36 @@ export default function QasidaBook({ onBack }) {
         <BgLayer />
         <div style={{ maxWidth: 680, margin: "0 auto", padding: "0 18px 120px", position: "relative", zIndex: 5 }}>
           <button onClick={() => setSelectedId(null)} style={backBtnStyle}
-            onMouseEnter={e => e.currentTarget.style.color = "#4a9e99"}
-            onMouseLeave={e => e.currentTarget.style.color = "rgba(74,158,153,0.6)"}>
+            onMouseEnter={e => e.currentTarget.style.color = "#c9a84c"}
+            onMouseLeave={e => e.currentTarget.style.color = "rgba(184,150,62,0.6)"}>
             ← All Qasidas
           </button>
-          <div style={{ padding: "22px 0 20px", borderBottom: "1px solid rgba(74,158,153,0.25)" }}>
+          <div style={{ padding: "22px 0 20px", borderBottom: "1px solid rgba(44,110,106,0.25)" }}>
             <div style={{ marginBottom: 10 }}><Badge language={selected.language} /></div>
             <h1 style={{
               fontSize: "clamp(20px,6vw,34px)", fontWeight: 400,
               color: "#e8f0ef", margin: "0 0 6px", lineHeight: 1.3,
               fontFamily: "Georgia, 'Times New Roman', serif",
-              textShadow: "0 0 40px rgba(74,158,153,0.2)",
+              textShadow: "0 0 40px rgba(44,110,106,0.2)",
             }}>
               {selected.title}
             </h1>
-            <p style={{ fontSize: 13, color: "rgba(74,158,153,0.7)", margin: 0, letterSpacing: 0.5 }}>
+            <p style={{ fontSize: 13, color: "rgba(44,110,106,0.7)", margin: 0, letterSpacing: 0.5 }}>
               {selected.poet}
             </p>
           </div>
           <div style={{
             display: "flex", gap: 20, padding: "12px 0",
-            borderBottom: "1px solid rgba(74,158,153,0.1)",
+            borderBottom: "1px solid rgba(44,110,106,0.1)",
             fontSize: 11, letterSpacing: "1.2px", textTransform: "uppercase",
             flexWrap: "wrap",
           }}>
             <span style={{ color: "#cce4e2", display: "flex", alignItems: "center", gap: 7 }}>
-              <span style={{ width: 18, height: 2, background: "rgba(74,158,153,0.3)", display: "inline-block", borderRadius: 2 }} />
+              <span style={{ width: 18, height: 2, background: "rgba(180,220,218,0.3)", display: "inline-block", borderRadius: 2 }} />
               Arabic
             </span>
-            <span style={{ color: "rgba(74,158,153,0.9)", display: "flex", alignItems: "center", gap: 7 }}>
-              <span style={{ width: 18, height: 2, background: "rgba(74,158,153,0.6)", display: "inline-block", borderRadius: 2 }} />
+            <span style={{ color: "rgba(180,220,218,0.85)", display: "flex", alignItems: "center", gap: 7 }}>
+              <span style={{ width: 18, height: 2, background: "rgba(44,110,106,0.6)", display: "inline-block", borderRadius: 2 }} />
               Transliteration
             </span>
             <span style={{ color: "rgba(201,168,76,0.85)", display: "flex", alignItems: "center", gap: 7 }}>
@@ -1007,30 +1007,30 @@ export default function QasidaBook({ onBack }) {
       <BgLayer />
       <header style={{
         position: "relative", zIndex: 10,
-        borderBottom: "1px solid rgba(74,158,153,0.25)",
+        borderBottom: "1px solid rgba(44,110,106,0.25)",
         padding: "44px 24px 28px", textAlign: "center",
       }}>
         <button onClick={onBack} style={{
           ...backBtnStyle, padding: "0 0 20px",
           position: "absolute", left: 20, top: 24,
         }}
-          onMouseEnter={e => e.currentTarget.style.color = "#4a9e99"}
-          onMouseLeave={e => e.currentTarget.style.color = "rgba(74,158,153,0.6)"}>
+          onMouseEnter={e => e.currentTarget.style.color = "#c9a84c"}
+          onMouseLeave={e => e.currentTarget.style.color = "rgba(184,150,62,0.6)"}>
           ← Home
         </button>
-        <div style={{ fontSize: 18, letterSpacing: 4, color: "rgba(74,158,153,0.7)", marginBottom: 10, fontFamily: "serif" }}>
+        <div style={{ fontSize: 18, letterSpacing: 4, color: "rgba(184,150,62,0.7)", marginBottom: 10, fontFamily: "serif" }}>
           قصيدة
         </div>
         <h1 style={{
           fontSize: "clamp(30px,7vw,52px)", fontWeight: 400,
           color: "#e8f0ef", margin: "0 0 6px", letterSpacing: 2,
           fontFamily: "Georgia, 'Times New Roman', serif",
-          textShadow: "0 0 60px rgba(74,158,153,0.3)",
+          textShadow: "0 0 60px rgba(44,110,106,0.3)",
         }}>
           Qasida Lyrics
         </h1>
-        <div style={{ width: 140, height: 1, background: "linear-gradient(90deg,transparent,rgba(74,158,153,0.6),transparent)", margin: "14px auto 12px" }} />
-        <p style={{ fontSize: 12, color: "rgba(74,158,153,0.55)", letterSpacing: 3, margin: 0, textTransform: "uppercase" }}>
+        <div style={{ width: 140, height: 1, background: "linear-gradient(90deg,transparent,rgba(184,150,62,0.6),transparent)", margin: "14px auto 12px" }} />
+        <p style={{ fontSize: 12, color: "rgba(44,110,106,0.55)", letterSpacing: 3, margin: 0, textTransform: "uppercase" }}>
           {qasidas.length} Qasidas
         </p>
       </header>
@@ -1042,7 +1042,7 @@ export default function QasidaBook({ onBack }) {
             style={{
               flex: 1, minWidth: 220,
               background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(74,158,153,0.22)",
+              border: "1px solid rgba(44,110,106,0.22)",
               borderRadius: 8, padding: "10px 16px",
               color: "#cce4e2", fontSize: 14, fontFamily: "inherit", outline: "none",
             }}
@@ -1050,8 +1050,8 @@ export default function QasidaBook({ onBack }) {
           <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
             {langOptions.map(l => (
               <button key={l} onClick={() => setFilterLang(l)} style={{
-                background: filterLang === l ? "rgba(74,158,153,0.2)" : "rgba(255,255,255,0.04)",
-                border: `1px solid ${filterLang === l ? "rgba(74,158,153,0.6)" : "rgba(255,255,255,0.1)"}`,
+                background: filterLang === l ? "rgba(44,110,106,0.2)" : "rgba(255,255,255,0.04)",
+                border: `1px solid ${filterLang === l ? "rgba(44,110,106,0.6)" : "rgba(255,255,255,0.1)"}`,
                 borderRadius: 20, padding: "6px 14px",
                 color: filterLang === l ? "#c9a84c" : "rgba(180,220,218,0.6)",
                 fontSize: 12, cursor: "pointer", fontFamily: "inherit",
@@ -1074,8 +1074,8 @@ export default function QasidaBook({ onBack }) {
       </main>
       <footer style={{
         position: "relative", zIndex: 5, textAlign: "center", padding: "22px",
-        borderTop: "1px solid rgba(74,158,153,0.1)",
-        color: "rgba(74,158,153,0.5)", fontSize: 20,
+        borderTop: "1px solid rgba(44,110,106,0.1)",
+        color: "rgba(184,150,62,0.5)", fontSize: 20,
         fontFamily: "Georgia, 'Times New Roman', serif", letterSpacing: 2,
       }}>
         اللهم صل على سيدنا محمد
