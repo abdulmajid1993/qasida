@@ -142,3 +142,27 @@ Netlify builds from `app/` (`npm run build`) and publishes `app/build`
 - Styling is inline-style objects (no CSS files / Tailwind). Match the
   surrounding palette (teal `#2c6e6a`, gold `#c9a84c`, serif fonts).
 - Keep new code idiomatic to the existing file it lives in.
+
+## ⚠️ Mobile & tablet first (REQUIRED for any visual change)
+
+**This application is used overwhelmingly on tablets and mobile phones.** Any
+frontend / visual change MUST be optimized for small touch screens first and
+scale up to desktop second. Treat phone/tablet as the primary target, not an
+afterthought.
+
+When changing or adding UI:
+
+- **Use fluid type, not fixed sizes.** Follow the existing
+  `fontSize: "clamp(min, vw, max)"` pattern (e.g. `clamp(20px,6vw,34px)`).
+- **Use self-collapsing layouts.** Reuse the existing grid pattern
+  `repeat(auto-fill, minmax(min(100%, 300px), 1fr))` and `flexWrap: "wrap"`
+  so things stack to a single column on narrow screens.
+- **No fixed-pixel widths** that can overflow a ~360px-wide phone; prefer
+  `maxWidth`, `%`, `flex`, and `min(...)`.
+- **Tap targets ≥ ~44px**, with adequate spacing — fingers, not cursors.
+- **Don't rely on hover** to reveal anything essential; hover doesn't exist on
+  touch. Hover may enhance, never gate.
+- The app keeps responsiveness in inline styles (no CSS files, no JS media
+  queries) — match that approach. See `docs/responsive-design.md`.
+- **Verify on a narrow viewport** (DevTools device toolbar ~375px AND a tablet
+  width ~768–1024px) before considering a visual change done.

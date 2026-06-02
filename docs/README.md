@@ -4,9 +4,16 @@ A React app for reading **Qawwali**, **Qasida**, and **Ilahi** devotional
 poetry, each verse shown in its original language beside an English
 translation.
 
+> **⚠️ Mobile & tablet first.** This app is used overwhelmingly on phones and
+> tablets. Every visual/frontend change must be optimized for small touch
+> screens first and scale up to desktop second. See
+> [responsive-design.md](./responsive-design.md).
+
 ## Documentation index
 
 - [Architecture](./architecture.md) — how the app is structured and rendered.
+- [Responsive design (mobile & tablet first)](./responsive-design.md) —
+  **required reading before any visual change.**
 - [Lyrics data format](./lyrics-data-format.md) — the data shape and the rules
   for editing lyrics safely.
 - [Editing & maintaining lyrics](./editing-lyrics.md) — workflow, the

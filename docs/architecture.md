@@ -71,3 +71,28 @@ Each song may define `introCount: N`. The first `N` verses are labelled
   (Georgia / Times New Roman).
 - Each collection re-implements its own small presentational components
   (cards, verse blocks, badges) in its own file.
+
+## ⚠️ Mobile & tablet first — read before any visual change
+
+**This app is used overwhelmingly on phones and tablets.** Every frontend /
+visual change MUST look and work well on small touch screens first, and scale
+up to desktop second — not the other way around. See
+[responsive-design.md](./responsive-design.md) for the full checklist.
+
+The existing code is already mobile-first **without JS media queries** — it
+achieves responsiveness purely through CSS-in-inline-style techniques:
+
+- **Fluid type** with `clamp(min, vw, max)` so text scales with the viewport,
+  e.g. `fontSize: "clamp(20px,6vw,34px)"` for headings.
+- **Self-collapsing grids**:
+  `gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 300px), 1fr))"`
+  — cards become a single full-width column on phones and multi-column on
+  wider screens automatically.
+- **Wrapping flex rows** (`display: "flex", flexWrap: "wrap"`) for the search
+  bar and language filter chips.
+- A fixed viewport meta in `public/index.html`
+  (`width=device-width, initial-scale=1`).
+- Constrained reading width via `maxWidth` on the content column.
+
+Match these patterns when adding UI. Avoid fixed pixel widths, desktop-only
+hover-dependent affordances, and tap targets smaller than ~44px.
