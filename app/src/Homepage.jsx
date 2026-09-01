@@ -70,7 +70,7 @@ const sections = [
     title: "Altin Silsile",
     arabic: "السلسلة الذهبية",
     description: "The Golden Chain of Naqshbandi Sufi masters",
-    count: 39,
+    count: 40,
     accent: "#c08a3e",
     accentDim: "rgba(192,138,62,0.12)",
     accentBorder: "rgba(192,138,62,0.35)",
