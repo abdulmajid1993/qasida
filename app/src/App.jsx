@@ -41,7 +41,7 @@ const qawwalis = [
       },
       {
         original: "Tere He Naam Say Her Ibtida Hai\nTere He Naam Tak Intiha Hai\nTeri Hamd-O-Sana Alhamdulillah\nK Tu Mere Mohammad Ka Khuda Hai",
-        translation: "Every beginning is with your name\nWith your name ends everythingYour praise is 'praise be to Allah'\nThat you are the God of my Mohammad",
+        translation: "Every beginning is with your name\nWith your name ends everything\nYour praise is 'praise be to Allah'\nThat you are the God of my Mohammad",
       },
       {
         original: "Yeh Zameen Jab Na Thi Yeh Jahaan Jab Na Thaa\nChaand Suraj Na Thay Aasman Jab Na Tha\nRaaz-E-Haq Bhi Kisi Per Ayaan Jab Na Tha\nTab Na Tha Kuch Yahaan Tha Magar Tu Hee Tu",
