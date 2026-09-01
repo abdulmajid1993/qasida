@@ -65,6 +65,26 @@ const sections = [
       </svg>
     ),
   },
+  {
+    id: "altinsilsile",
+    title: "Altin Silsile",
+    arabic: "السلسلة الذهبية",
+    description: "The Golden Chain of Naqshbandi Sufi masters",
+    count: 39,
+    accent: "#c08a3e",
+    accentDim: "rgba(192,138,62,0.12)",
+    accentBorder: "rgba(192,138,62,0.35)",
+    icon: (
+      <svg viewBox="0 0 60 60" width="52" height="52" fill="none">
+        <circle cx="21" cy="20" r="9" stroke="rgba(192,138,62,0.55)" strokeWidth="1.5"/>
+        <circle cx="39" cy="30" r="9" stroke="rgba(192,138,62,0.4)" strokeWidth="1.5"/>
+        <circle cx="21" cy="40" r="9" stroke="rgba(192,138,62,0.55)" strokeWidth="1.5"/>
+        <circle cx="21" cy="20" r="2" fill="rgba(192,138,62,0.6)"/>
+        <circle cx="39" cy="30" r="2" fill="rgba(192,138,62,0.5)"/>
+        <circle cx="21" cy="40" r="2" fill="rgba(192,138,62,0.6)"/>
+      </svg>
+    ),
+  },
 ];
 
 function GeometricPattern() {
@@ -166,7 +186,11 @@ function SectionCard({ section, index, onClick }) {
           letterSpacing: 2, textTransform: "uppercase", opacity: 0.7,
         }}>
           {section.count > 0
-            ? `${section.count} ${section.id === "qawwali" ? "Qawwalis" : section.id === "qasida" ? "Qasidas" : "Ilahis"}`
+            ? `${section.count} ${
+                section.id === "qawwali" ? "Qawwalis" :
+                section.id === "qasida" ? "Qasidas" :
+                section.id === "ilahi" ? "Ilahis" : "Masters"
+              }`
             : "Coming soon"}
         </span>
         {!isComingSoon && (

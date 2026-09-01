@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Homepage from "./Homepage";
 import QasidaBook from "./QasidaBook";
 import IlahiBook from "./IlahiBook";
+import AltinSilsileBook from "./AltinSilsileBook";
 
 // ============================================================
 //  QAWWALI DATA — paste your lyrics here
@@ -1825,6 +1826,7 @@ export default function App() {
   if (section === "home") return <Homepage onSelect={setSection} />;
   if (section === "qasida") return <QasidaBook onBack={() => setSection("home")} />;
   if (section === "ilahi") return <IlahiBook onBack={() => setSection("home")} />;
+  if (section === "altinsilsile") return <AltinSilsileBook onBack={() => setSection("home")} />;
 
   // section === "qawwali"
   return <QawwaliBook onBack={() => setSection("home")} />;
