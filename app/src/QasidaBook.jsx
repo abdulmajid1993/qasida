@@ -8,6 +8,11 @@ const qasidas = [
     poet: "Traditional",
     verses: [
       {
+        transliteration: "Aṣ-ṣalātu ʿalan-nabiyyi was-salāmu ʿalar-rasūl\nAsh-shafīʿul-abṭaḥī wa Muḥammadun ʿarabī",
+        original: "الصلاة على النبي والسلام على الرسول\nالشفيع الأبطحي ومحمد عربي",
+        translation: "Blessings be upon the Prophet, and peace be upon the Messenger\nThe Intercessor of al-Abtah, and Muhammad the Arab",
+      },
+      {
         transliteration: "ʿAqluhu lammā duʿiya fī maḥabbatihi sī",
         original: "عقله لما دعي في محبته سي",
         translation: "His intellect forbade him from calling in the love for the sinful",
